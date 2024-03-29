@@ -1,4 +1,6 @@
+// REACT
 import React, { useState } from "react";
+// CSS
 import './WeatherApp.css';
 import search_icon from '../assets/search.png';
 import clear_icon from '../assets/clear.png';
