@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 // CSS
 import './WeatherApp.css';
+// ICONS
 import search_icon from '../assets/search.png';
 import clear_icon from '../assets/clear.png';
 import humidity_icon from '../assets/humidity.png';
@@ -11,51 +12,54 @@ import snow_icon from '../assets/snow.png';
 import drizzle_icon from '../assets/drizzle.png';
 import cloud_icon from '../assets/cloud.png';
 
-
+// WEATHER APP
 const WeatherApp = () => {
-
+// API KEY
 let api_key = 'b6a61e5b7a18005040feaa658d3a6eed';
-const [wicon,setWicon] = useState(cloud_icon);
+// WEATHER ICON  
+const [weaIcon,setWeaIcon] = useState(cloud_icon);
 
-
+// API SEARCH ASYNC FUNCTION
 const search = async () => {
+    // CITY INPUT 
     const element = document.getElementsByClassName("cityInput");
+
     if(element[0].value === ""){
         return 0;
     } else {
-
-    }
-    let url = `http://api.openweathermap.org/data/2.5/weather?q=${element[0].value}&units=Metric&appid=${api_key}`
-
-    let response = await fetch(url);
-    let data = await response.json();
-
-    const humidity = document.getElementsByClassName('humidity-percentage');
-    const wind = document.getElementsByClassName('wind-rate'); 
-    const temperature = document.getElementsByClassName("weather-temp");
-    const location = document.getElementsByClassName("weather-location");
-
-    humidity[0].innerHTML = data.main.humidity + " %";
-    wind[0].innerHTML = Math.floor(data.wind.speed) +  " km/h";
-    temperature[0].innerHTML = Math.floor(data.main.temp) + "F";
-    location[0].innerHTML = data.name;
-
-    if(data.weather[0].icon === "01d" || data.weather[0].icon === "01n"){
-        setWicon(clear_icon);
-    } else if (data.weather[0].icon === "02d" || data.weather[0].icon === "02n"){
-        setWicon(cloud_icon);
-    } else if (data.weather[0].icon === "03d" || data.weather[0].icon === "03n"){
-        setWicon(drizzle_icon);
-    } else if (data.weather[0].icon === "04d" || data.weather[0].icon === "04n"){
-        setWicon(drizzle_icon);
-    } else if (data.weather[0].icon === "09d" || data.weather[0].icon === "09n"){
-        setWicon(rain_icon);
-    } else if (data.weather[0].icon === "10d" || data.weather[0].icon === "10n"){
-        setWicon(rain_icon);
-    } else if (data.weather[0].icon === "14d" || data.weather[0].icon === "14n"){
-        setWicon(cloud_icon);
-    } else {
-        setWicon(clear_icon)
+        // URL
+        let url = `http://api.openweathermap.org/data/2.5/weather?q=${element[0].value}&units=Metric&appid=${api_key}`
+        // RESPONSE & DATA  
+        let response = await fetch(url);
+        let data = await response.json();
+        // GRABBING DESCRIPTION 
+        const humidity = document.getElementsByClassName('humidity-percentage');
+        const wind = document.getElementsByClassName('wind-rate'); 
+        const temperature = document.getElementsByClassName("weather-temp");
+        const location = document.getElementsByClassName("weather-location");
+        // DESCRIPTION INNER TEXT
+        humidity[0].innerHTML = data.main.humidity + " %";
+        wind[0].innerHTML = Math.floor(data.wind.speed) +  " km/h";
+        temperature[0].innerHTML = Math.floor(data.main.temp) + " °F";
+        location[0].innerHTML = data.name;
+        // SETTING WEATHER ICON
+        if(data.weather[0].icon === "01d" || data.weather[0].icon === "01n"){
+            setWeaIcon(clear_icon); // CLEAR WEATHER
+        } else if (data.weather[0].icon === "02d" || data.weather[0].icon === "02n"){
+            setWeaIcon(cloud_icon); // CLOUDY WEATHER
+        } else if (data.weather[0].icon === "03d" || data.weather[0].icon === "03n"){
+            setWeaIcon(drizzle_icon); // DRIZZLE WEATHER
+        } else if (data.weather[0].icon === "04d" || data.weather[0].icon === "04n"){
+            setWeaIcon(drizzle_icon); // DRIZZLE WEATHER
+        } else if (data.weather[0].icon === "09d" || data.weather[0].icon === "09n"){
+            setWeaIcon(rain_icon); // RAIN WEATHER
+        } else if (data.weather[0].icon === "10d" || data.weather[0].icon === "10n"){
+            setWeaIcon(rain_icon); // RAIN WEATHER
+        } else if (data.weather[0].icon === "14d" || data.weather[0].icon === "14n"){
+            setWeaIcon(cloud_icon); // CLOUDY WEATHER
+        } else {
+            setWeaIcon(clear_icon); // CLEAR WEATHER
+        }
     }
 
 }
@@ -69,9 +73,9 @@ const search = async () => {
                 </div>
             </div>
             <div className="weather-image">
-                <img src={wicon} alt="weather-icon" />
+                <img src={weaIcon} alt="weather-icon" />
             </div>
-            <div className="weather-temp">24%C</div>
+            <div className="weather-temp">24°C</div>
             <div className="weather-location">London</div>
             
             <div className="data-container">
@@ -97,5 +101,4 @@ const search = async () => {
     )
 }
 
-
-export default WeatherApp
+export default WeatherApp;
