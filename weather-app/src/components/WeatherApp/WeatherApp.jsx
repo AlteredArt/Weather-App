@@ -96,6 +96,14 @@ const search = async () => {
                     </div>
                 </div>
 
+                <div className="element">
+                    <img src={wind_icon} alt="" className="icon" />
+                    <div className="data">
+                        <div className="wind-rate">64MPH</div>
+                        <div className="text">Wind Speed</div>
+                    </div>
+                </div>
+
             </div>
         </div>
     )
