@@ -65,9 +65,13 @@ const search = async () => {
 }
 
     return (
+        /* CONTAINER */
         <div className="container">
+            {/* TOP BAR */}
             <div className="top-bar">
+                {/* CITY INPUT */}
                 <input type="text" className="cityInput" placeholder="Search" />
+
                 <div className="search-icon" onClick={() => {search()}}>
                     <img src={search_icon} alt="search-icon" />
                 </div>
