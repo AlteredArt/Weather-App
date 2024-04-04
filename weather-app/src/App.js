@@ -1,3 +1,4 @@
+// IMPORT WEATHER APP
 import WeatherApp from './components/WeatherApp/WeatherApp'
 // APP
 function App() {
@@ -7,5 +8,5 @@ function App() {
     </div>
   );
 }
-
+// EXPORT DEFAULT APP
 export default App;
