@@ -84,7 +84,7 @@ const search = async () => {
             <div className="weather-location">London</div>
             
             <div className="data-container">
-
+                {/* ELEMENT  */}
                 <div className="element">
                     <img src={humidity_icon} alt="" className="icon" />
                     <div className="data">
