@@ -72,7 +72,7 @@ const search = async () => {
             <div className="top-bar">
                 {/* CITY INPUT */}
                 <input type="text" className="cityInput" placeholder="Search" />
-
+                {/* SEARCH ICON */}
                 <div className="search-icon" onClick={() => {search()}}>
                     <img src={search_icon} alt="search-icon" />
                 </div>
