@@ -92,6 +92,7 @@ const search = async () => {
                         <div className="text">Humidity</div>
                     </div>
                 </div>
+                {/* ELEMENT  */}
 
                 <div className="element">
                     <img src={wind_icon} alt="" className="icon" />
@@ -100,6 +101,7 @@ const search = async () => {
                         <div className="text">Wind Speed</div>
                     </div>
                 </div>
+                {/* ELEMENT  */}
 
                 <div className="element">
                     <img src={wind_icon} alt="" className="icon" />
