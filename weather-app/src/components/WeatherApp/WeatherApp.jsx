@@ -77,9 +77,12 @@ const search = async () => {
                     <img src={search_icon} alt="search-icon" />
                 </div>
             </div>
+            {/* WEATHER ICON */}
             <div className="weather-image">
                 <img src={weaIcon} alt="weather-icon" />
             </div>
+            {/* WEATHER ICON */}
+
             <div className="weather-temp">24°C</div>
             <div className="weather-location">London</div>
             
