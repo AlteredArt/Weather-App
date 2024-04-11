@@ -77,7 +77,9 @@ const search = async () => {
                     <img src={search_icon} alt="search-icon" />
                 </div>
             </div>
-            {/* WEATHER ICON */}
+            {/* TOP BAR END */}
+
+            {/* MAIN WEATHER */}
             <div className="weather-image">
                 <img src={weaIcon} alt="weather-icon" />
             </div>
@@ -85,8 +87,11 @@ const search = async () => {
 
             <div className="weather-temp">24°C</div>
             <div className="weather-location">London</div>
-            
+            {/* MAIN WEATHER END */}
+
+            {/* SIDE WEATHER */}
             <div className="data-container">
+
                 {/* ELEMENT  */}
                 <div className="element">
                     <img src={humidity_icon} alt="" className="icon" />
@@ -95,8 +100,8 @@ const search = async () => {
                         <div className="text">Humidity</div>
                     </div>
                 </div>
-                {/* ELEMENT  */}
 
+                {/* ELEMENT  */}
                 <div className="element">
                     <img src={wind_icon} alt="" className="icon" />
                     <div className="data">
@@ -104,8 +109,8 @@ const search = async () => {
                         <div className="text">Wind Speed</div>
                     </div>
                 </div>
-                {/* ELEMENT  */}
 
+                {/* ELEMENT  */}
                 <div className="element">
                     <img src={wind_icon} alt="" className="icon" />
                     <div className="data">
@@ -115,6 +120,8 @@ const search = async () => {
                 </div>
 
             </div>
+            {/* CONTAINER END */}
+
         </div>
     )
 }
