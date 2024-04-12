@@ -85,8 +85,8 @@ const search = async () => {
             </div>
             {/* WEATHER ICON */}
 
-            <div className="weather-temp">24°C</div>
-            <div className="weather-location">London</div>
+            <div className="weather-temp">101°F</div>
+            <div className="weather-location">Texas</div>
             {/* MAIN WEATHER END */}
 
             {/* SIDE WEATHER */}
