@@ -92,7 +92,7 @@ const search = async () => {
             {/* SIDE WEATHER */}
             <div className="data-container">
 
-                {/* ELEMENT  */}
+                {/* ELEMENT - HUMIDITY */}
                 <div className="element">
                     <img src={humidity_icon} alt="" className="icon" />
                     <div className="data">
@@ -101,7 +101,7 @@ const search = async () => {
                     </div>
                 </div>
 
-                {/* ELEMENT  */}
+                {/* ELEMENT - WIND SPEED */}
                 <div className="element">
                     <img src={wind_icon} alt="" className="icon" />
                     <div className="data">
@@ -110,7 +110,7 @@ const search = async () => {
                     </div>
                 </div>
 
-                {/* ELEMENT  */}
+                {/* ELEMENT - OTHER */}
                 <div className="element">
                     <img src={wind_icon} alt="" className="icon" />
                     <div className="data">
