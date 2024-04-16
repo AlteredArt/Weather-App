@@ -8,5 +8,6 @@ function App() {
     </div>
   );
 }
+
 // EXPORT DEFAULT APP
 export default App;
